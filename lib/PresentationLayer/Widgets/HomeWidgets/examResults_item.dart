@@ -5,13 +5,18 @@ import '../../../Constants/get_routes.dart';
 import '../../../Constants/text_styles.dart';
 
 class ExamResults extends StatelessWidget {
-  const ExamResults({super.key});
-
+  const ExamResults({super.key,this.sonId});
+  final int? sonId;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-        Get.toNamed(AppRoutes.results);
+        if (sonId != null) {
+          Get.toNamed(AppRoutes.results, arguments: {'sonId': sonId});
+        } else {
+          // يمكنك هنا عرض رسالة خطأ أو التعامل مع الحالة التي لا يكون فيها sonId
+          Get.snackbar('خطأ', 'رقم الابن غير متاح');
+        }
       },
       child: Container(
         margin: EdgeInsets.all(8),

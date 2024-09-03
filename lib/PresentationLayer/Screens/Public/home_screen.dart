@@ -5,7 +5,7 @@ import '../../../Constants/colors.dart';
 import '../../../Constants/text_styles.dart';
 import '../../Widgets/HomeWidgets/attendance_item.dart';
 import '../../Widgets/HomeWidgets/courses_item.dart';
-import '../../Widgets/HomeWidgets/examResults.dart';
+import '../../Widgets/HomeWidgets/examResults_item.dart';
 import '../../Widgets/HomeWidgets/homworks_item.dart';
 import '../../Widgets/HomeWidgets/notes_item.dart';
 import '../../Widgets/HomeWidgets/programs_item.dart';
@@ -128,7 +128,7 @@ class HomeScreen extends StatelessWidget {
                       Attendance(sonId: sonId),
                       HomeWorksItem(sonId: sonId),
                       CoursesItem(sonId: sonId),
-                      ExamResults(),
+                      ExamResults(sonId: sonId),
                       NotesItem(sonId: sonId),
                       ProgramsItem(sonId: sonId),
                       AdsItem()
