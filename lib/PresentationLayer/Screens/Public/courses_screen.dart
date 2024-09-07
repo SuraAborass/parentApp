@@ -18,7 +18,7 @@ class CoursesScreen extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         bottomNavigationBar: const InstituteBottomNavigationBar(),
-        appBar: instituteAppBar(title: Text("الملاحظات",style: UITextStyle.titleBold.copyWith(fontSize: 25))),
+        appBar: instituteAppBar(title: Text("الدورات",style: UITextStyle.titleBold.copyWith(fontSize: 25))),
         drawer:  InstituteDrawer(),
         body: Padding(
           padding: const EdgeInsets.all(15.0),

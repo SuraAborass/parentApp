@@ -29,12 +29,16 @@ class CoursesController extends GetxController{
     loading.value = true;
     String? token = storage.read('userToken');
     if (token != null) {
-      courses = await repo.getCourses(token, sonId);
-      print("courses: $courses");
+      // احصل على جميع الدورات
+      List<Course> allCourses = await repo.getCourses(token, sonId);
+      // قم بتصفية الدورات التي يكون فيها type يساوي 10
+      courses = allCourses.where((course) => course.type == 10).toList();
+      print("filtered courses: $courses");
     } else {
       print("No token found!");
     }
     update();
     loading.value = false;
   }
+
 }

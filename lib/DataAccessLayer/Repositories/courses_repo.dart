@@ -7,7 +7,6 @@ import '../Models/course.dart';
 
 class CoursesRepo {
   CoursesClient client = CoursesClient();
-
   Future<List<Course>> getCourses(String token, int sonId) async {
     var response = await client.getCourses(token, sonId);
     if (response != "") {
