@@ -1,6 +1,5 @@
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-
 import '../../DataAccessLayer/Models/course.dart';
 import '../../DataAccessLayer/Repositories/courses_repo.dart';
 
@@ -29,16 +28,15 @@ class CoursesController extends GetxController{
     loading.value = true;
     String? token = storage.read('userToken');
     if (token != null) {
-      // احصل على جميع الدورات
-      List<Course> allCourses = await repo.getCourses(token, sonId);
-      // قم بتصفية الدورات التي يكون فيها type يساوي 10
-      courses = allCourses.where((course) => course.type == 10).toList();
-      print("filtered courses: $courses");
+      // احصل على جميع الدورات بدون أي تصفية
+      courses = await repo.getCourses(token, sonId);
+      print("all courses: $courses");  // طباعة جميع الدورات
     } else {
       print("No token found!");
     }
     update();
     loading.value = false;
   }
+
 
 }

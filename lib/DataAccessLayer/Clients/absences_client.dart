@@ -5,7 +5,7 @@ import '../../Constants/links.dart';
 class AbsencesClient {
   Future<dynamic> getAbsences(String token, int sonId) async {
     var response = await http.get(
-      Uri.parse(baseLink + "parent/all_out_work_student/$sonId"),
+      Uri.parse("${baseLink}parent/all_out_work_student/$sonId"),
       headers: {
         'Authorization': 'Bearer $token',
       },

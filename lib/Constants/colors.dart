@@ -21,6 +21,7 @@ static const iconColor = Color.fromARGB(255, 228, 228, 228);
 static const remainingAmount = Color(0xff8985F8);
 static const beige = Color(0xffF8D082);
 static const resultColor = Color(0xffEFE8E8);
+static const yellow = Color(0xffEBBE2B);
 
 //shimmers
   static const shimmerBaseColor = Color.fromARGB(225,248, 248, 248);

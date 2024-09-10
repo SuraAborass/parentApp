@@ -10,9 +10,10 @@ class AdvertsController extends GetxController{
 
 
   @override
-  void onInit() {
+  void onInit() async{
+    await getAdverts();
     super.onInit();
-    getAdverts();
+
   }
 
   Future<void> getAdverts() async {

@@ -14,6 +14,7 @@ import '../PresentationLayer/Screens/Public/programs_screen.dart';
 import '../PresentationLayer/Screens/Public/sons_screen.dart';
 import '../PresentationLayer/Screens/Public/splash_screen.dart';
 import '../PresentationLayer/Screens/Public/subjects_screen.dart';
+import '../PresentationLayer/Screens/Public/sumResult_screen.dart';
 import 'get_routes.dart';
 
 List<GetPage<dynamic>> getPages = [
@@ -77,6 +78,10 @@ List<GetPage<dynamic>> getPages = [
   GetPage(
     name: AppRoutes.profileScreen,
     page: () => ProfileScreen(),
+    transition: Transition.zoom,),
+  GetPage(
+    name: AppRoutes.sumResult,
+    page: () => SumResultScreen(),
     transition: Transition.zoom,),
 
 ];

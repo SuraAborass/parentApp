@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../Constants/Helpers/course_type.dart';
 import '../../../Constants/colors.dart';
 import '../../../Constants/text_styles.dart';
 import '../../../DataAccessLayer/Models/course.dart';
@@ -14,7 +15,7 @@ class CourseItem extends StatelessWidget {
       child: Container(
         width: 373,
         decoration: BoxDecoration(
-          color: UIColors.beige,
+          color: CourseType.getCourseType(course.type),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(
@@ -26,10 +27,10 @@ class CourseItem extends StatelessWidget {
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
               ),
-              child: const FittedBox(
+              child:  FittedBox(
                 fit: BoxFit.contain, // يمكنك استخدام BoxFit.fill أو BoxFit.cover أيضًا
                 child: Icon(
-                  Icons.done,
+                  CourseTypeIcon.getCourseType(course.type),
                   color: UIColors.white,
                 ),
               ),

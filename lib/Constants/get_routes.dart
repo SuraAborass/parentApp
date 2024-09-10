@@ -12,6 +12,7 @@ class AppRoutes {
   static const homeworks = "/home/subjects/homeworks";
   static const fees = "/home/fees";
   static const results = "/home/results";
+  static const sumResult = "/home/results/sumResult";
   static const profileScreen = "/home/profileScreen";
 
 }
